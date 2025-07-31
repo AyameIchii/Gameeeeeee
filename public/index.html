@@ -263,8 +263,11 @@
         const ctx = canvas.getContext('2d');
         const gridSize = 30;
         const tileCount = canvas.width / gridSize;
-        const SUPABASE_URL = 'https://zwixilhhgrwhftnhgifh.supabase.co'
-        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpvYnBsZ21oenBxZmJsZmZwYmlzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM5MzYxMzIsImV4cCI6MjA2OTUxMjEzMn0.xBRWz0JsTTOMjLdRWwLkMc1SCh3w6l6IMKg5Tf-1-pQ'
+        
+        const SUPABASE_URL = 'https://zobplgmhzpqfblffpbis.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpvYnBsZ21oenBxZmJsZmZwYmlzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM5MzYxMzIsImV4cCI6MjA2OTUxMjEzMn0.xBRWz0JsTTOMjLdRWwLkMc1SCh3w6l6IMKg5Tf-1-pQ'; // rút gọn để bảo mật
+
+
         let gameState = {
             snake: [{x: 10, y: 10}],
             food: {x: 15, y: 15},
@@ -544,7 +547,7 @@
         }
 
         // Multi-user leaderboard functions using PHP API
-         async function saveScore(playerName, score) {
+        async function saveScore(playerName, score) {
             try {
                 const response = await fetch(`${SUPABASE_URL}/rest/v1/scores`, {
                     method: 'POST',
